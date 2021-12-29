@@ -1,0 +1,14 @@
+dist
+node_modules
+.idea
+package-lock.json
+out
+export
+*.js
+dev.patch
+.scannerwork
+certs
+update.key
+scripts/**/*.json
+/config/
+!/res/**

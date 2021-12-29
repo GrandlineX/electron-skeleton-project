@@ -1,0 +1,62 @@
+{
+  "name": "@grandlinex/electron-skeleton",
+  "version": "0.16.0",
+  "description": "electron-skeleton-project",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "webpack",
+    "buildServe": "cross-env BUILD=development npm run build &&  cross-env BUILD=development webpack serve",
+    "startDev": "electron-forge start",
+    "recompile": "electron-rebuild",
+    "lint": "eslint ./src",
+    "package": "npm run recompile && cross-env BUILD=production npm run build && electron-forge package",
+    "start": "cross-env BUILD=development npm run build && cross-env ELECTRON_IS_DEV=0 electron-forge start"
+  },
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@grandlinex/e-kernel": "^0.16.5",
+    "electron-devtools-installer": "^3.2.0",
+    "electron": "^16.0.4",
+    "electron-is-dev": "^2.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "@types/node": "^16.11.14",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1",
+    "webpack-node-externals": "^3.0.0",
+    "electron": "^16.0.4",
+    "typescript": "^4.5.4"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GrandlineX/electron-skeleton-project.git"
+  }
+}
