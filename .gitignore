@@ -12,3 +12,7 @@ update.key
 scripts/**/*.json
 /config/
 !/res/**
+!forge.config.js
+!webpack.config.js
+!webpack.electron.js
+!webpack.react.js
