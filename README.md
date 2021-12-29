@@ -13,15 +13,15 @@
 ```shell
 git clone https://github.com/GrandlineX/electron-skeleton-project.git && cd electron-skeleton-project
 ```
-3. Install dependencies 
+2. Install dependencies 
 ```shell
 npm install
 ```
-5. Recompile project;
+3. Recompile project;
 ```shell
 npm run recompile
 ```
-7. Build project ;
+4. Build project ;
 ```shell
 npm run start 
 ```
