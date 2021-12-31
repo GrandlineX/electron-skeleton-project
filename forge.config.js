@@ -20,7 +20,6 @@ const ignore = [
   '.ncurc.json',
   'webpack.electron.js',
   'webpack.react.js',
-  'package.json',
   'README.md',
   'readme.md',
 ];
