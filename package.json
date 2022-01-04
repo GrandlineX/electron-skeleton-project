@@ -4,13 +4,13 @@
   "description": "electron-skeleton-project",
   "main": "dist/main.js",
   "scripts": {
-    "build": "webpack",
-    "buildServe": "cross-env BUILD=development npm run build &&  cross-env BUILD=development webpack serve",
+    "buildprep": "webpack",
+    "buildServe": "cross-env BUILD=development npm run buildprep &&  cross-env BUILD=development webpack serve",
     "startDev": "electron-forge start",
     "recompile": "electron-rebuild",
     "lint": "eslint ./src",
-    "package": "npm run recompile && cross-env BUILD=production npm run build && electron-forge package",
-    "start": "cross-env BUILD=development npm run build && cross-env ELECTRON_IS_DEV=0 electron-forge start"
+    "package": "npm run recompile && cross-env BUILD=production npm run buildprep && electron-forge package",
+    "start": "cross-env BUILD=development npm run buildprep && cross-env ELECTRON_IS_DEV=0 electron-forge start"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
