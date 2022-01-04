@@ -32,12 +32,18 @@ if (electronIsDev) {
   config = undefined;
 }
 
-const AppName = 'SkeletonApp';
-const AppCode = 'skeleton_app';
+const appName = 'SkeletonApp';
+const appCode = 'skeleton_app';
 
 class SkeletonKernel extends ElectronKernel {
   constructor() {
-    super(AppName, AppCode, appRoot, preload, config);
+    super({
+      appName,
+      appCode,
+      appRoot,
+      preloadRoot: preload,
+      pathOverride: config,
+    });
 
     /**
      * Set global icons
