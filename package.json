@@ -1,6 +1,6 @@
 {
   "name": "@grandlinex/electron-skeleton",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "electron-skeleton-project",
   "main": "dist/main.js",
   "scripts": {
@@ -55,7 +55,6 @@
     "electron": "^16.0.4",
     "typescript": "^4.5.4"
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/GrandlineX/electron-skeleton-project.git"
