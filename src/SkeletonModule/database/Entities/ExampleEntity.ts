@@ -2,7 +2,9 @@ import { Column, CoreEntity, Entity } from '@grandlinex/e-kernel';
 
 @Entity('ExampleEntity')
 export default class ExampleEntity extends CoreEntity {
-  @Column()
+  @Column({
+    dataType: 'string',
+  })
   title: string;
 
   @Column({
