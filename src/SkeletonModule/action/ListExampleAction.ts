@@ -15,7 +15,9 @@ export default class ListExampleAction extends BaseAction {
     const mdb = this.getModule().getDb() as ExampleDB;
 
     return mdb.exampleEntity.getObjList({
-      age: 42,
+      search: {
+        age: 42,
+      },
     });
   }
 }
