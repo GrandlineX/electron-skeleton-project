@@ -5,8 +5,7 @@ import * as Path from 'path';
 import installExtension, {
   REACT_DEVELOPER_TOOLS,
 } from 'electron-devtools-installer';
-import electronIsDev from 'electron-is-dev';
-import ElectronKernel from '@grandlinex/e-kernel';
+import { ElectronKernel, isDev } from '@grandlinex/e-kernel';
 import ExampleModule from '@/SkeletonModule/ExampleModule';
 
 /**
@@ -26,7 +25,7 @@ const appRoot = Path.join(app.getAppPath(), 'dist', 'index.html');
  * Override config path in dev mode to current folder
  */
 let config: string | undefined;
-if (electronIsDev) {
+if (isDev()) {
   config = Path.join(app.getAppPath(), 'config');
 } else {
   config = undefined;
@@ -59,7 +58,7 @@ class SkeletonKernel extends ElectronKernel {
      */
     this.addModule(new ExampleModule(this));
 
-    if (electronIsDev) {
+    if (isDev()) {
       /**
        * Install the React dev tools browser extension if starting in DEV mode
        */
