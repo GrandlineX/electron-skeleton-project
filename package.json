@@ -1,6 +1,6 @@
 {
   "name": "@grandlinex/electron-skeleton",
-  "version": "0.30.2",
+  "version": "0.30.3",
   "description": "electron-skeleton-project",
   "main": "dist/main.js",
   "scripts": {
