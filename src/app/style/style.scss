@@ -1,0 +1,15 @@
+@import "@grandlinex/react-components/style/style";
+
+
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $main-background;
+}
+
+.main-content{
+  @extend .glx-default-text;
+  padding: 10px;
+}

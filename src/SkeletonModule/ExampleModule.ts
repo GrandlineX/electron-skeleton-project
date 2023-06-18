@@ -9,23 +9,13 @@ export default class ExampleModule extends BaseKernelModule<
 > {
   constructor(kernel: IKernel) {
     super('example', kernel);
+    // Register actions for controlling the main window
+
     this.addAction(new ListExampleAction(this));
   }
 
   async initModule(): Promise<void> {
     const db = new ExampleDB(this);
     this.setDb(db);
-  }
-
-  startup(): Promise<void> {
-    return Promise.resolve(undefined);
-  }
-
-  beforeServiceStart(): Promise<void> {
-    return Promise.resolve(undefined);
-  }
-
-  final(): Promise<void> {
-    return Promise.resolve(undefined);
   }
 }

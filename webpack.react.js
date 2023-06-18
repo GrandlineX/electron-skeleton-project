@@ -7,7 +7,7 @@ module.exports = {
   //  mode: 'development',
   mode: 'production',
   entry: './src/renderer.tsx',
-  target: 'electron-renderer',
+  target: 'web',
   devtool: 'source-map',
   devServer: {
     static: path.join(__dirname, 'dist/renderer.js'),

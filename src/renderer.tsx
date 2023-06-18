@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { GLXElectronAPI } from '@grandlinex/e-kernel';
+import App from '@/app/App';
 
-ReactDOM.render(
-  <div className="root">Empty start page</div>,
-  document.getElementById('root')
-);
+// Type interface for Electron API
+
+declare global {
+  interface Window {
+    glxApi: GLXElectronAPI;
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

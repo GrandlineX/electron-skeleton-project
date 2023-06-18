@@ -5,7 +5,7 @@ import * as Path from 'path';
 import installExtension, {
   REACT_DEVELOPER_TOOLS,
 } from 'electron-devtools-installer';
-import { ElectronKernel, isDev } from '@grandlinex/e-kernel';
+import { ElectronKernel, isDev, ElectronGlobals } from '@grandlinex/e-kernel';
 import ExampleModule from '@/SkeletonModule/ExampleModule';
 
 /**
@@ -56,6 +56,11 @@ class SkeletonKernel extends ElectronKernel {
      * );
      * ```
      */
+
+    // Set the window frame to false
+    const store = this.getConfigStore();
+    store.set(ElectronGlobals.GLX_WINDOW_FRAME, 'false');
+
     this.addModule(new ExampleModule(this));
 
     if (isDev()) {
